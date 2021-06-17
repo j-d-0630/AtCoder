@@ -1,10 +1,10 @@
-from typing import List
-
-
 N = int(input())
 A = list(map(int,input().split()))
 
 s = A[0]
+'''
+a XOR a = 0 、a XOR a XOR a = a　であることを利用する
+'''
 for num in A[1:]:
   s ^= num
 
