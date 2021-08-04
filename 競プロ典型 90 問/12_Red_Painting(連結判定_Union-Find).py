@@ -71,7 +71,7 @@ def query2(px,py,qx,qy):
   
   hash1 = px * W + py
   hash2 = qx * W + qy
-  if uf.root(hash1) == uf.root(hash2):
+  if uf.root(hash1) == uf.root(hash2): # 親nodeが同じなら繋がっているということ
     return True
   else:
     return False
