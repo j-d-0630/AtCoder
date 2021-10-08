@@ -2,6 +2,7 @@ N,L = map(int,input().split())
 K = int(input())
 A_list = list(map(int,input().split()))
 
+# 解がmidより大きいか小さいかを探すための関数
 def solve(mid):
     pre = 0 #分割後の幅測定開始位置
     count = 0 #分割回数
