@@ -7,8 +7,10 @@ def solve(mid):
     pre = 0 #分割後の幅測定開始位置
     count = 0 #分割回数
     for i in range(N):
-        #分割したものの左辺も右辺もmidより長いならmidより大きな値を解にできる条件を満たす
-        if (A_list[i] - pre >= mid) and (L - A_list[i] >= mid): # A_list[i]で分割したときの左辺、右辺
+        #分割したものの左辺も右辺もmidより長いなら、この位置で分割した場合、midより大きな値を解にできる条件を満たす
+        # A_list[i]で分割したときの左辺 and 右辺
+        # ここで範囲を>=とするか>とするかで最後の解がleftになるかrightになるかが変わる。⇒midより大きいことを条件とすれば解はright、mid以上とすると解はleft。
+        if (A_list[i] - pre >= mid) and (L - A_list[i] >= mid):
             count += 1
             pre = A_list[i]
     
