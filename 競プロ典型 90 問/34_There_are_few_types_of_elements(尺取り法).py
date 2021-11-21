@@ -7,7 +7,7 @@ N,K = map(int,input().split())
 A = list(map(int,input().split()))
 ans = 0
 
-cr = 0
+cr = 0 # 現在探索しているindex
 cnt = 0 # 異なる数字に遭遇した回数
 
 d = defaultdict(int)
